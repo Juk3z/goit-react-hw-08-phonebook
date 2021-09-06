@@ -1,1 +1,1 @@
-export { default } from './Authorization.js';
+export { default } from './AuthorizationForm.js';

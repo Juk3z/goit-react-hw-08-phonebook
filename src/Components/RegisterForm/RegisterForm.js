@@ -1,14 +1,23 @@
 import { useState } from "react";
-import { login } from 'redux/authorization/authorization-operations';
+import { register } from 'redux/authorization/authorization-operations';
 import { useDispatch } from "react-redux";
 
-function Authorization() {
+import {Button} from 'react-bootstrap';
+
+
+function Register() {
+    const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const dispatch = useDispatch();
 
     const inputHandler = function (evt) {
         switch (evt.target.name) {
+
+            case "name":
+                setName(evt.target.value);
+                break;
+
             case "email":
                 setEmail(evt.target.value);
                 break;
@@ -20,30 +29,35 @@ function Authorization() {
             default:
                 return;
         };
-};
+    };
 
     const submitHanlder = function (evt) {
         evt.preventDefault();
-        dispatch(login({email, password}));
+        dispatch(register({name, email, password}));
+        setName('');
         setEmail('');
         setPassword('');
     }
-
+    
     return (
         <form onSubmit={submitHanlder}>
+             <div>
+                <p>Name</p>
+                <input onChange={inputHandler} name="name" type="text" value={name}/>
+            </div>
+
             <div>
-                <p>Login</p>
+                <p>Email</p>
                 <input onChange={inputHandler} name="email" type="email" value={email}/>
             </div>
-            
+
             <div>
                 <p>Password</p>
                 <input onChange={inputHandler} name="password" type="password" value={password}/>
             </div>
-
-        <button type="submit">
-            Login
-        </button>
+        <Button type="submit">
+            Register
+        </Button>
         </form>
     )
 }
@@ -51,4 +65,4 @@ function Authorization() {
 
 
 
-export default Authorization;
+export default Register;

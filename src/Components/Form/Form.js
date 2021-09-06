@@ -7,6 +7,8 @@ import { postContact } from "redux/contacts/contacts-operations";
 import shortid from "shortid";
 import styles from "./styles.module.css";
 
+import { Button } from 'react-bootstrap';
+
 function Form() {
   const [name, setName] = useState("");
   const [number, setNumber] = useState("");
@@ -84,9 +86,9 @@ function Form() {
           required
         />
       </label>
-      <button className={styles.submitBtn} type="submit">
+      <Button className={styles.submitBtn} type="submit">
         Add Contact
-      </button>
+      </Button>
     </form>
   );
 };

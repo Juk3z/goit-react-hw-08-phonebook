@@ -7,7 +7,7 @@ function AuthNavigation() {
     return (
         <>
             <Nav.Link  href='/register'>register</Nav.Link>
-            <Nav.Link  href='/login'>log in</Nav.Link>
+            <Nav.Link  href='/login'>login</Nav.Link>
         </>
     )
 };

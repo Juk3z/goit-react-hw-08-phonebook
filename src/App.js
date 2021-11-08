@@ -34,7 +34,7 @@ function App() {
           <Switch>
 
             <PublicRoute path='/' exact>
-              <h2>Hello, please sing up or sign in</h2>
+              <h2>Hello, please sign up or login</h2>
             </PublicRoute>
 
             <PublicRoute path='/register' restricted>

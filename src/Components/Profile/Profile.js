@@ -9,7 +9,7 @@ function Profile() {
 
     return (
         <>
-            <span color="white">{user.name || 'example' }</span>
+            <span className="user-name" color="white">{user.name || 'example' }</span>
             <Button onClick={() => dispatch(logout())}>logout</Button>
         </>
     )

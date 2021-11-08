@@ -7,6 +7,24 @@ body {
   margin-right: auto;
   max-width: 500px;
   padding: 20px;
-  /* background-color: rgb(169, 210, 224); */
+  background-color: rgb(169, 210, 224);
   border-radius: 8px;
+}
+
+p {
+  margin: 0;
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+.user-name {
+  margin-right: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  color: black;
 }
